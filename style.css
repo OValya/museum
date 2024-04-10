@@ -254,6 +254,15 @@ h5{
 
 /*end section Video*/
 
+/*Tickets*/
+fieldset{
+  display: flex;
+  flex-direction: column;
+  border: none;
+  padding-top: 50px;
+}
+/*end Tickets*/
+
 
 /*@media (prefers-color-scheme: light) {*/
 /*  :root {*/
