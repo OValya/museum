@@ -16,6 +16,7 @@
 *{
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -52,6 +53,11 @@ a:hover{
   display: grid;
   grid-template-columns: 1fr 720px;
   column-gap: 60px;
+}
+.grid-3{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 42px;
 }
 
 .light-bg{
@@ -185,7 +191,68 @@ h5{
 
 /*section Explorer*/
 
+/*end section Explorer*/
 
+/*section Video*/
+.video > img{
+  width: 100%;
+}
+
+.controls{
+  background-color: var(--bg-dark);
+  padding: 27px 30px;
+  display: flex;
+  justify-content: space-between;
+  margin: 32px 0 40px;
+}
+
+.control{
+  width: 30px;
+  height: 30px;
+  background-color: white;
+}
+.play{
+  mask: url('./assets/svg/video/play.svg') no-repeat 0 0/contain;
+}
+
+.volume{
+  mask: url('./assets/svg/video/volume.svg') no-repeat 0 0/contain;
+}
+
+.full{
+  mask: url('./assets/svg/video/Frame.svg') no-repeat 0 0/contain;
+}
+
+.control:hover{
+  background-color: var(--font-gold);
+  cursor: pointer;
+}
+
+.slide{
+  position: relative;
+}
+
+.title{
+  position: absolute;
+  left: 10px;
+  top: 15px;
+  width: 100%;
+}
+
+.title:before{
+  content: url("./assets/svg/video/Ellipse 9.svg");
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+.title:after{
+  content: url("./assets/svg/video/video-menu.svg");
+  vertical-align: middle;
+  margin-left: auto;
+}
+
+
+/*end section Video*/
 
 
 /*@media (prefers-color-scheme: light) {*/
