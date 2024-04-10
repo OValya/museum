@@ -44,6 +44,16 @@ a:hover{
   margin: 0 auto;
 }
 
+.section{
+  padding: 75px 0;
+}
+
+.grid-2{
+  display: grid;
+  grid-template-columns: 1fr 720px;
+  column-gap: 60px;
+}
+
 .light-bg{
   background-color: var(--bg-light);
   color: var(--font-dark);
@@ -56,17 +66,18 @@ h2, h3{
   letter-spacing: 5px;
   text-transform: uppercase;
   font-weight: 400;
-  padding-top:75px;
+  border-bottom: var(--dark-red) 3px solid;
+  margin-bottom: 75px;
 }
 
 h3{
   font-size: 3.2em;
   padding-top:25px;
+  margin-bottom: 0;
 }
 
 .light-bg h2{
   color: var(--font-gold);
-  border-bottom: var(--dark-red) 3px solid;
 }
 
 .light-bg h3{
@@ -78,6 +89,10 @@ p{
   font-family: var(--font-family);
   font-weight: 300;
   font-size: 1.8em;
+  color: var(--light-color);
+}
+
+.light-bg p{
   color: var(--font-dark);
 }
 
@@ -150,10 +165,9 @@ h5{
 /*section Virtual tour*/
 .cards{
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
   column-gap: 60px;
   row-gap: 75px;
-  padding:75px 0;
 }
 
 .card{
@@ -166,6 +180,11 @@ h5{
   inset: 0;
   cursor: pointer;
 }
+
+/*end section Virtual tour*/
+
+/*section Explorer*/
+
 
 
 
