@@ -108,15 +108,10 @@ a:hover{
   color: var(--font-gold);
 }
 
-/*.light-bg h3{*/
-/*  color: var(--font-dark);*/
-/*  border-bottom: var(--dark-red) 2px solid;*/
-/*}*/
-
 p{
   font-family: var(--font-family);
   font-weight: 300;
-  font-size: 1.8em;
+  font-size: 18px;
   color: var(--light-color);
 }
 
@@ -127,7 +122,7 @@ p{
 h4{
   font-family: var(--font-family);
   font-weight: 100;
-  font-size: 2.2em;
+  font-size: 22px;
   color: var(--font-dark);
   padding: 10px 0 0 0;
 }
@@ -135,7 +130,7 @@ h4{
 h5{
   font-family: var(--font-family);
   font-weight: 100;
-  font-size: 1.8em;
+  font-size: 18px;
   color: var(--font-dark);
   padding: 10px 0 0 0;
 }
@@ -146,22 +141,27 @@ h5{
 /*  header  */
 
 .header__wrapper{
-
-  display: grid;
-  grid-template-columns: 200px 1fr;
+  display: flex;
+  justify-content: space-between;
+  /*display: grid;*/
+  /*grid-template-columns: 200px 1fr;*/
   padding: 60px 0;
 }
 
-.nav{
-  display: block;
-  margin-left: auto;
+/*.nav{*/
+/*  display: block;*/
+/*  margin-left: auto;*/
+/*}*/
+
+.list{
+  font-size: 22px;
+  font-weight: 200;
+  letter-spacing: 2px;
 }
 
-.nav-list{
+.nav-header{
   display: flex;
   gap: 55px;
-  font-size: 2.2em;
-  font-weight: 100;
 }
 
 .logo {
@@ -308,13 +308,31 @@ fieldset{
 /*end burger*/
 
 /*footer*/
-.footer__wrapper{
+.footer__wrapper-up{
   padding: 75px 0 50px;
+  display: flex;
+  justify-content: space-between;
 }
+
+.footer__wrapper-bottom{
+  padding: 50px 0 50px;
+}
+
+.nav{
+  /*margin-left: 0;*/
+}
+
+.footer-nav{
+  columns: 2;
+  line-height: 50px;
+}
+
 
 .social-media{
   display: flex;
   justify-content: space-between;
+  align-self: end;
+  gap:25px;
 }
 
 .social-media__icon{
@@ -346,6 +364,11 @@ fieldset{
 .social-media__icon:hover{
   background-color: var(--font-gold);
   cursor: pointer;
+}
+
+.copyrights{
+  display: flex;
+  justify-content: space-between;
 }
 
 
