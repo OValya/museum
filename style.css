@@ -35,13 +35,17 @@ a{
   color: var(--font-family);
 }
 
+img{
+  max-width: 100%;
+}
+
 a:hover{
   color: var(--font-gold);
 }
 
 
 .wrapper{
-  width: 1440px;
+  max-width: 1440px;
   margin: 0 auto;
 }
 
@@ -131,6 +135,7 @@ h5{
 }
 
 .nav{
+  display: block;
   margin-left: auto;
 }
 
@@ -263,16 +268,73 @@ fieldset{
 }
 /*end Tickets*/
 
+/*menu burger*/
+.burger{
+  display: none;
+  width: 32px;
+  height: 18px;
+  border-bottom: 2px solid var(--light-color);
+  border-top: 2px solid var(--light-color);
+  position: relative;
+}
+.burger:after{
+  content: '';
+  position: absolute;
+  border-top:2px solid var(--light-color);
+  top:50%;
+  left:0;
+  width: 100%;
+}
 
-/*@media (prefers-color-scheme: light) {*/
-/*  :root {*/
-/*    color: #213547;*/
-/*    background-color: #ffffff;*/
-/*  }*/
-/*  a:hover {*/
-/*    color: #747bff;*/
-/*  }*/
-/*  button {*/
-/*    background-color: #f9f9f9;*/
-/*  }*/
-/*}*/
+
+@media (max-width: 420px){
+  .wrapper{
+    max-width: 380px;
+  }
+
+}
+
+@media (max-width: 768px) and (min-width: 420px){
+  .wrapper{
+    max-width: 728px;
+  }
+
+  .cards{
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 56px;
+    row-gap: 40px;
+  }
+}
+
+@media (max-width: 768px){
+
+}
+
+@media (max-width: 1024px){
+  .wrapper{
+    max-width: 984px;
+  }
+
+  .burger{
+    display: block;
+    margin-left: auto;
+  }
+
+  .nav{
+    display: none;
+  }
+
+
+}
+
+@media (max-width: 1024px) and (min-width: 768px){
+  .cards{
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 108px;
+    row-gap: 60px;
+  }
+}
+
+
+
+
