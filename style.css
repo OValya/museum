@@ -70,31 +70,48 @@ a:hover{
   color: var(--font-dark);
 }
 
-h2, h3{
+.section__title,
+.card__title{
   font-family: var(--second-family);
   color: var(--light-color);
-  font-size: 8em;
+  font-size: 80px;
   letter-spacing: 5px;
   text-transform: uppercase;
   font-weight: 400;
-  border-bottom: var(--dark-red) 3px solid;
+  /*border-bottom: var(--dark-red) 3px solid;*/
   margin-bottom: 75px;
 }
 
-h3{
-  font-size: 3.2em;
-  padding-top:25px;
-  margin-bottom: 0;
+.underlined-title{
+  border-bottom: var(--dark-red) 3px solid
 }
 
-.light-bg h2{
+.card__title{
+  position: relative;
+  font-size: 32px;
+  color: var(--font-dark);
+  padding-top:25px;
+  margin-bottom: 0;
+
+}
+.card__title:after{
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  height: 3px;
+  width: 300px;
+  background-color: var(--dark-red);
+}
+
+.light-bg .section__title{
   color: var(--font-gold);
 }
 
-.light-bg h3{
-  color: var(--font-dark);
-  border-bottom: var(--dark-red) 2px solid;
-}
+/*.light-bg h3{*/
+/*  color: var(--font-dark);*/
+/*  border-bottom: var(--dark-red) 2px solid;*/
+/*}*/
 
 p{
   font-family: var(--font-family);
@@ -148,10 +165,10 @@ h5{
 }
 
 .logo {
-  font-size: 2.8em;
+  font-size: 28px;
   text-transform: uppercase;
   font-family: var(--second-family);
-  letter-spacing: 0.18em;
+  letter-spacing: 2px;
   cursor: pointer;
 }
 
@@ -286,6 +303,53 @@ fieldset{
   left:0;
   width: 100%;
 }
+
+
+/*end burger*/
+
+/*footer*/
+.footer__wrapper{
+  padding: 75px 0 50px;
+}
+
+.social-media{
+  display: flex;
+  justify-content: space-between;
+}
+
+.social-media__icon{
+  width: 48px;
+  height: 48px;
+  background-color: white;
+}
+
+.insta{
+  /*background: url("./assets/svg/social_icon/inst.svg") no-repeat center/50%;*/
+  mask: url("./assets/svg/social_icon/Instagram.svg") no-repeat center;
+}
+
+.fb{
+  mask: url("./assets/svg/social_icon/Facebook.svg") no-repeat center;
+}
+
+.pint{
+  mask: url("./assets/svg/social_icon/pinterest.svg") no-repeat center;
+}
+
+.youtube{
+  mask: url("./assets/svg/social_icon/Youtube.svg") no-repeat center;
+}
+.tw{
+  mask: url("./assets/svg/social_icon/Twitter.svg") no-repeat center;
+}
+
+.social-media__icon:hover{
+  background-color: var(--font-gold);
+  cursor: pointer;
+}
+
+
+/*end footer*/
 
 @media (max-width: 1024px){
   .wrapper{
