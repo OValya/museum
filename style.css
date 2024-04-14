@@ -92,8 +92,15 @@ a:hover{
   color: var(--font-dark);
   padding-top:25px;
   margin-bottom: 0;
-
 }
+
+.form-title{
+  font-size: 28px;
+  font-weight: bold;
+  color: var(--font-dark);
+  padding-bottom: 25px;
+}
+
 .card__title:after{
   content: "";
   position: absolute;
@@ -119,7 +126,7 @@ p{
   color: var(--font-dark);
 }
 
-h4{
+h4, label{
   font-family: var(--font-family);
   font-weight: 100;
   font-size: 22px;
@@ -236,6 +243,7 @@ h5{
 .slider{
   width: 1000px;
   margin-left: auto;
+  position: relative;
 }
 
 .slide:after{
@@ -364,7 +372,7 @@ h5{
   cursor: pointer;
 }
 
-.slide{
+.video-slide{
   position: relative;
 }
 
@@ -391,11 +399,26 @@ h5{
 /*end section Video*/
 
 /*Tickets*/
+.form-tickets{
+  display: flex;
+  justify-content: space-between;
+
+}
 fieldset{
   display: flex;
   flex-direction: column;
   border: none;
-  padding-top: 50px;
+  padding-top: 25px;
+}
+.type-ticket{
+  padding-top: 25px;
+}
+.type-ticket input{
+  margin-right: 23px;
+}
+
+.total{
+
 }
 /*end Tickets*/
 

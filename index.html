@@ -137,28 +137,28 @@
               <img src="./assets/video/poster0.jpg" alt="video poster">
               <div class="controls">
                 <div class="control play"></div>
-                <label>
+
                   <input type="range"/>
-                </label>
+
                 <div class="control volume"></div>
-                <label>
+
                   <input type="range"/>
-                </label>
+
                 <div class="control full"></div>
 
               </div>
             </div>
-            <div class="slider grid-3">
-              <div class="slide">
+            <div class="video-slider grid-3">
+              <div class="video-slide">
                 <p class="title">Exposition - Le Corps et l’Ame. De Dona...</p>
                 <img src="./assets/video/poster1.jpg" alt="" width="452">
 
               </div>
-              <div class="slide">
+              <div class="video-slide">
                 <p class="title">Exposition - Le Corps et l’Ame. De Dona...</p>
                 <img src="./assets/video/poster2.jpg" alt="" width="452">
               </div>
-              <div class="slide">
+              <div class="video-slide">
                 <p class="title">Exposition - Le Corps et l’Ame. De Dona...</p>
                 <img src="./assets/video/poster3.jpg" alt="" width="452">
               </div>
@@ -178,26 +178,53 @@
             <h2 class="section__title underlined-title">BUY TICKETS</h2>
             <div class="grid-2">
               <img src="./assets/img/tickets/ticket_foto.jpg" alt="buy ticket">
-              <form>
+              <form class="form-tickets" onsubmit="buyTicket()">
                 <fieldset>
-                  <legend>
+                  <legend class="form-title">
                     Ticket Type
                   </legend>
-                  <div>
+                  <div class="type-ticket">
                     <input type="radio" name="type_ticket" value="Permanent" id="permanent" checked/>
                     <label for="permanent">Permanent exhibition</label>
                   </div>
 
-                  <div>
+                  <div class="type-ticket">
                     <input type="radio" name="type_ticket" value="Temporary" id="temporary"/>
                     <label for="temporary">Temporary exhibition</label>
                   </div>
 
 
-                  <div>
+                  <div class="type-ticket">
                     <input type="radio" name="type_ticket" value="Combined" id="combined"/>
                     <label for="combined"> Combined Admission</label>
                   </div>
+
+                </fieldset>
+                <fieldset>
+                  <legend class="form-title">
+                    Amount
+                  </legend>
+                  <div>
+                    <label for="basic">Basic 18+</label>
+                    <div>
+                      <span>+</span>
+                      <input type="number"  id="basic"/>
+                      <span>-</span>
+                    </div>
+
+                  </div>
+                  <div>
+                    <label for="senior">Senior 65+</label>
+                    <div>
+                      <span>+</span>
+                      <input type="number"  id="senior"/>
+                      <span>-</span>
+                    </div>
+                  </div>
+
+                  <p class="form-title">Total: 0$</p>
+
+                  <button type="submit">Buy now</button>
 
                 </fieldset>
               </form>
