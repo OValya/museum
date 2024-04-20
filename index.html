@@ -37,35 +37,39 @@
               <a class="button">Discover the Louvre</a>
             </div>
             <div class="slider">
-              <div class="slide">
-                <img src="./assets/img/welcome/1.jpg" alt="first slide">
+              <div class="slider-container">
+                <div class="slide active">
+                  <img src="./assets/img/welcome/1.jpg" alt="first slide">
+                </div>
+                <div class="slide ">
+                  <img src="./assets/img/welcome/2.jpg" alt="second slide">
+                </div>
+                <div class="slide ">
+                  <img src="./assets/img/welcome/3.jpg" alt="third slide">
+                </div>
+                <div class="slide ">
+                  <img src="./assets/img/welcome/4.jpg" alt="fourth slide">
+                </div>
+                <div class="slide ">
+                  <img src="./assets/img/welcome/5.jpg" alt="fifth slide">
+                </div>
+
               </div>
-              <div class="slide hide">
-                <img src="./assets/img/welcome/2.jpg" alt="second slide">
-              </div>
-              <div class="slide hide">
-                <img src="./assets/img/welcome/3.jpg" alt="third slide">
-              </div>
-              <div class="slide hide">
-                <img src="./assets/img/welcome/4.jpg" alt="fourth slide">
-              </div>
-              <div class="slide hide">
-                <img src="./assets/img/welcome/5.jpg" alt="fifth slide">
-              </div>
+
               <div class="slider__controls">
                 <div class="counter">
                   01 | 05
                 </div>
                 <ul class="bullets">
-                  <li class="bullet active-bullet"></li>
-                  <li class="bullet"></li>
-                  <li class="bullet"></li>
-                  <li class="bullet"></li>
-                  <li class="bullet"></li>
+                  <li class="bullet active-bullet" ></li>
+                  <li class="bullet" ></li>
+                  <li class="bullet" ></li>
+                  <li class="bullet" ></li>
+                  <li class="bullet" ></li>
                 </ul>
                 <div class="arrows">
-                  <a href="#" class="arrow prev" onclick="showSlide(-1)"></a>
-                  <a href="#" class="arrow next" onclick="showSlide(1)"></a>
+                  <button class="arrow prev" ></button>
+                  <button class="arrow next" ></button>
                 </div>
 
               </div>
@@ -150,8 +154,31 @@
             </div>
             <div class="video-slider grid-3">
               <div class="video-slide">
-                <p class="title">Exposition - Le Corps et l’Ame. De Dona...</p>
-                <img src="./assets/video/poster1.jpg" alt="" width="452">
+                <iframe width="452"
+                        height="254"
+                        loading="lazy"
+                        src="https://www.youtube.com/embed/zp1BXPX8jcU?si=cCIlmtrksx1PTrtn&amp;controls=0"
+                        srcdoc="
+                        <style>
+                           *{overflow: hidden;padding:0;margin:0;}
+                           html,body{height:100%}
+                           span, img{position:absolute;width:100%;top:0;bottom:0;margin:auto}
+                           span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}
+                        </style>
+                        <a href='https://www.youtube.com/embed/zp1BXPX8jcU?autoplay=1&si=cCIlmtrksx1PTrtn'>
+                                  <img src='./assets/video/poster1.jpg' alt='Demo video' width='452'>
+                                  <span>▶</span>
+                                </a>"
+                        title="YouTube video player"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin"
+                        allowfullscreen>
+
+                </iframe>
+
+<!--                <p class="title">Exposition - Le Corps et l’Ame. De Dona...</p>-->
+<!--                <img src="./assets/video/poster1.jpg" alt="" width="452">-->
 
               </div>
               <div class="video-slide">

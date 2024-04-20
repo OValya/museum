@@ -1,24 +1,70 @@
 import './style.css'
-// import javascriptLogo from './javascript.svg'
-// import viteLogo from '/vite.svg'
-// import { setupCounter } from './counter.js'
+import Control from "./control.js";
 
-// document.querySelector('#app').innerHTML = `
-//   <div>
-//     <a href="https://vitejs.dev" target="_blank">
-//       <img src="${viteLogo}" class="logo" alt="Vite logo" />
-//     </a>
-//     <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
-//       <img src="${javascriptLogo}" class="logo vanilla" alt="JavaScript logo" />
-//     </a>
-//     <h1>Hello Vite!</h1>
-//     <div class="card">
-//       <button id="counter" type="button"></button>
-//     </div>
-//     <p class="read-the-docs">
-//       Click on the Vite logo to learn more
-//     </p>
-//   </div>
-// `
-//
-// setupCounter(document.querySelector('#counter'))
+const slides = document.querySelectorAll('.slide');
+let currentSlide = 0;
+// const activeBullet = document.querySelector('.active-bullet');
+const bullets = document.querySelectorAll('.bullet');
+bullets.forEach(((bullet, it) => bullet.onclick=()=>scrollSlides(it)))
+
+function scrollSlides(it){
+    if(currentSlide < it){
+        showSlide('left', it-currentSlide);
+    }
+    if(currentSlide > it){
+        showSlide('right', currentSlide-it);
+    }
+}
+
+function hideSlide(dur) {
+    slides[currentSlide].classList.add(dur);
+    bullets[currentSlide].classList.remove('active-bullet');
+    slides[currentSlide].addEventListener('animationend', function(){
+
+        this.classList.remove('active', dur);
+
+    })
+}
+
+function buttonsDisabled(disabled) {
+    arrowPrev.disabled=disabled;
+    arrowNext.disabled=disabled;
+}
+
+
+function showSlide(dur, count=1){
+    buttonsDisabled(true);
+    if(dur=='left'){
+        hideSlide(dur);
+        currentSlide = currentSlide + count;
+
+        slides[currentSlide].classList.add('next-slide');
+        slides[currentSlide].classList.add('from-right');
+        slides[currentSlide].addEventListener('animationend', function(){
+            this.classList.remove('from-right', 'next-slide');
+            this.classList.add('active');
+            buttonsDisabled(false);
+            bullets[currentSlide].classList.add('active-bullet');
+        })
+    }
+    if(dur=='right'){
+        hideSlide(dur);
+        currentSlide = currentSlide - count;
+        slides[currentSlide].classList.add('next-slide');
+        slides[currentSlide].classList.add('from-left');
+        slides[currentSlide].addEventListener('animationend', function(){
+            this.classList.remove('from-left', 'next-slide');
+            this.classList.add('active');
+            buttonsDisabled(false);
+            bullets[currentSlide].classList.add('active-bullet');
+        })
+    }
+
+}
+
+const arrowPrev = document.querySelector('.arrow.prev');
+arrowPrev.addEventListener('click', ()=>showSlide('right'))
+const arrowNext = document.querySelector('.arrow.next');
+arrowNext.addEventListener('click', ()=>showSlide('left'))
+
+

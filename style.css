@@ -19,6 +19,10 @@
   padding: 0;
   box-sizing: border-box;
 }
+html,
+body {
+  height: 100%;
+}
 
 body {
   background-color: var(--bg-dark);
@@ -209,6 +213,7 @@ h5{
 }
 .welcome-wrapper{
   position: relative;
+  /*height: 828px;*/
 }
 
 .welcome__info{
@@ -240,10 +245,18 @@ h5{
   transition: background-color 0.3s;
 }
 
+.slider-container{
+  position: relative;
+  overflow: hidden;
+  /*margin: auto;*/
+}
+
 .slider{
+  /*position: absolute;*/
+  /*top:0;*/
+  /*right:0;*/
   width: 1000px;
   margin-left: auto;
-  position: relative;
 }
 
 .slide:after{
@@ -270,9 +283,78 @@ h5{
   background-color: var(--font-dark);
 }
 
-.hide{
+.slide{
   display: none;
+  position: relative;
 }
+
+.slide.active,
+.next-slide{
+  display: block;
+}
+
+.next-slide{
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+
+.right{
+  animation-name: right;
+  animation-duration: 5s;
+  animation-direction: reverse;
+}
+
+.left{
+  animation-name: left;
+  animation-duration: 5s;
+}
+
+.from-right{
+  animation-name: right;
+  animation-duration: 5s;
+}
+
+.from-left{
+  animation-name: left;
+  animation-duration: 5s;
+  animation-direction: reverse;
+}
+
+
+
+@keyframes left {
+  from{
+    left: 0
+  }
+  to{
+    left: -100%
+  }
+}
+
+@keyframes right {
+  from{
+    left: 100%
+  }
+  to{
+    left: 0
+  }
+}
+
+/*.fade{*/
+/*  animation-name: fade;*/
+/*  animation-duration: 5s;*/
+/*}*/
+
+/*@keyframes fade {*/
+/*  from{*/
+/*    opacity: 0*/
+/*  }*/
+/*  to{*/
+/*    opacity: 1*/
+/*  }*/
+/*}*/
 
 .bullets{
   display: flex;
@@ -283,6 +365,7 @@ h5{
   width: 16px;
   height: 16px;
   background-color: var(--light-color);
+  cursor: pointer;
 }
 
 .active-bullet{
@@ -300,6 +383,7 @@ h5{
   width: 30px;
   height: 8px;
   background-color: var(--light-color);
+  cursor: pointer;
 }
 .prev{
   mask:url("./assets/svg/welcome/←-1.svg") no-repeat center center;
