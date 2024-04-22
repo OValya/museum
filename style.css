@@ -302,23 +302,23 @@ h5{
 
 .right{
   animation-name: right;
-  animation-duration: 5s;
+  animation-duration: .5s;
   animation-direction: reverse;
 }
 
 .left{
   animation-name: left;
-  animation-duration: 5s;
+  animation-duration: .5s;
 }
 
 .from-right{
   animation-name: right;
-  animation-duration: 5s;
+  animation-duration: .5s;
 }
 
 .from-left{
   animation-name: left;
-  animation-duration: 5s;
+  animation-duration: .5s;
   animation-direction: reverse;
 }
 

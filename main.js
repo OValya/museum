@@ -3,6 +3,7 @@ import Control from "./control.js";
 
 const slides = document.querySelectorAll('.slide');
 let currentSlide = 0;
+const slideNumber=document.querySelector('.slide-number');
 // const activeBullet = document.querySelector('.active-bullet');
 const bullets = document.querySelectorAll('.bullet');
 bullets.forEach(((bullet, it) => bullet.onclick=()=>scrollSlides(it)))
@@ -17,6 +18,7 @@ function scrollSlides(it){
 }
 
 function hideSlide(dur) {
+    buttonsDisabled(true);
     slides[currentSlide].classList.add(dur);
     bullets[currentSlide].classList.remove('active-bullet');
     slides[currentSlide].addEventListener('animationend', function(){
@@ -31,13 +33,19 @@ function buttonsDisabled(disabled) {
     arrowNext.disabled=disabled;
 }
 
+function changeSlideNumber(){
+    const number = currentSlide+1;
+    slideNumber.textContent='0' + number;
+}
+
 
 function showSlide(dur, count=1){
-    buttonsDisabled(true);
-    if(dur=='left'){
+    // buttonsDisabled(true);
+    if(dur=='left' && currentSlide<4){ //todo magic number
+
         hideSlide(dur);
         currentSlide = currentSlide + count;
-
+        changeSlideNumber();
         slides[currentSlide].classList.add('next-slide');
         slides[currentSlide].classList.add('from-right');
         slides[currentSlide].addEventListener('animationend', function(){
@@ -47,9 +55,10 @@ function showSlide(dur, count=1){
             bullets[currentSlide].classList.add('active-bullet');
         })
     }
-    if(dur=='right'){
+    if(dur=='right' && currentSlide>0){//todo magic number
         hideSlide(dur);
         currentSlide = currentSlide - count;
+        changeSlideNumber();
         slides[currentSlide].classList.add('next-slide');
         slides[currentSlide].classList.add('from-left');
         slides[currentSlide].addEventListener('animationend', function(){
