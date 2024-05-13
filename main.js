@@ -1,6 +1,7 @@
 import './style.css'
-import Control from "./control.js";
+import container from "./gallery.js";
 
+//--------WELCOME
 const slides = document.querySelectorAll('.slide');
 let currentSlide = 0;
 const slideNumber=document.querySelector('.slide-number');
@@ -76,4 +77,68 @@ arrowPrev.addEventListener('click', ()=>showSlide('right'))
 const arrowNext = document.querySelector('.arrow.next');
 arrowNext.addEventListener('click', ()=>showSlide('left'))
 
+//-------------WELCOME end
+
+//-----VIDEO
+
+const iframeContainer = document.querySelector('.video-slide__container');
+function createFrame(srcDoc, src){
+    const frame = document.createElement('iframe');
+    // frame.src = src;
+    frame.srcdoc = srcDoc;
+    frame.width='452'
+    frame.height='254';
+    frame.loading='lazy';
+    frame.allowFullscreen=true;
+    frame.allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
+    frame.referrerpolicy='strict-origin-when-cross-origin'
+
+    return frame;
+}
+const iframeData = [{
+        img: './assets/video/poster0.jpg',
+        link: "https://www.youtube.com/embed/Vi5D6FKhRmo?autoplay=1&mute=1&si=ttxrEYDeR6xOHy-j"
+    },
+    {
+        img: './assets/video/poster1.jpg',
+        link:  'https://www.youtube.com/embed/zp1BXPX8jcU?autoplay=1&mute=1&si=cCIlmtrksx1PTrtn'
+    },
+    {
+        img: './assets/video/poster2.jpg',
+        link: 'https://www.youtube.com/embed/NOhDysLnTvY?autoplay=1&mute=1&si=W_xV3pTHPFWetomC'
+    },
+    {
+        img: './assets/video/poster3.jpg',
+        link: 'https://www.youtube.com/embed/aWmJ5DgyWPI?autoplay=1&mute=1&si=SADA7qh4w4Z7u70G'
+    },
+    {
+        img: './assets/video/poster4.jpg',
+        link: 'https://www.youtube.com/embed/2OR0OCr6uRE?autoplay=1&mute=1&si=KnCyZFHZP4UP9NIg'
+    }
+
+
+]
+const srcDocs = [];
+iframeData.map(data =>{
+    const srcDoc = `<style>
+                            *{overflow: hidden;padding:0;margin:0;}
+                            html,body{height:100%; transition: transform .5s;}
+                            span, img{position:absolute;width:100%;top:0;bottom:0;margin:auto}
+                            span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}
+                            html:hover span{color: darkgoldenrod}
+                            html:hover img{transform: scale(1.1); transition: transform .5s;}
+                           
+                            </style>
+                            <a href= ${data.link}>
+                            <img src=${data.img} alt='Video youtube' width='452'>
+                            <span>▶</span>
+                        </a>`;
+    srcDocs.push(srcDoc)
+}
+    
+)
+for (let i = 0; i < srcDocs.length; i++) {
+    const iframe = createFrame(srcDocs[i], iframeData[i].link);
+    iframeContainer.append(iframe)
+}
 
