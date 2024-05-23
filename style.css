@@ -27,7 +27,7 @@ body {
 body {
   background-color: var(--bg-dark);
   min-height: 100vh;
-  font-family: var(--font-family);
+  font-family: var(--font-family), serif;
   color: var(--light-color);
 }
 
@@ -76,7 +76,7 @@ a:hover{
 
 .section__title,
 .card__title{
-  font-family: var(--second-family);
+  font-family: var(--second-family), serif;
   color: var(--light-color);
   font-size: 80px;
   letter-spacing: 5px;
@@ -154,8 +154,6 @@ h5{
 .header__wrapper{
   display: flex;
   justify-content: space-between;
-  /*display: grid;*/
-  /*grid-template-columns: 200px 1fr;*/
   padding: 60px 0;
 }
 
@@ -355,6 +353,10 @@ h5{
 /*    opacity: 1*/
 /*  }*/
 /*}*/
+
+.counter{
+  font-size: 22px;
+}
 
 .bullets{
   display: flex;
@@ -687,6 +689,57 @@ fieldset{
     max-width: 984px;
   }
 
+  .header__wrapper{
+    padding: 48px 0;
+  }
+
+  .section{
+    padding: 60px 0;
+  }
+  .welcome-section{
+    padding: 0;
+  }
+
+  .slider{
+    width: 700px;
+  }
+
+  .section__title{
+    font-size: 50px;
+    line-height: 75px;
+    margin-bottom: 75px;
+  }
+
+  .welcome-section p{
+    font-size: 24px;
+    letter-spacing: 2px;
+    font-weight: 200;
+  }
+
+  .button{
+    width: 300px;
+    height: 60px;
+    margin-top: 50px;
+  }
+
+  .slider__controls{
+    position: relative;
+    bottom: 0;
+    margin-left: auto;
+    /*width: 600px;*/
+    /*height: 120px;*/
+    /*display: flex;*/
+    /*align-items: center;*/
+    /*justify-content: center;*/
+    column-gap:45px;
+    /*background-color: var(--font-dark);*/
+  }
+
+  .bullet{
+    height: 12px;
+    width: 12px;
+  }
+
   .burger{
     display: block;
     margin-left: auto;
@@ -700,6 +753,16 @@ fieldset{
     grid-template-columns: repeat(2, 1fr);
     column-gap: 108px;
     row-gap: 60px;
+  }
+
+  .grid-2{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+    row-gap: 62px;
+  }
+  .info p:not(.visible-p){
+    display: none;
   }
 }
 
