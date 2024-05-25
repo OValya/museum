@@ -108,7 +108,7 @@ a:hover{
 .card__title:after{
   content: "";
   position: absolute;
-  bottom: -5px;
+  bottom: -10px;
   left: 0;
   height: 3px;
   width: 300px;
@@ -120,7 +120,7 @@ a:hover{
 }
 
 p{
-  font-family: var(--font-family);
+  font-family: var(--font-family), serif;
   font-weight: 300;
   font-size: 18px;
   color: var(--light-color);
@@ -131,11 +131,11 @@ p{
 }
 
 h4, label{
-  font-family: var(--font-family);
+  font-family: var(--font-family), serif;
   font-weight: 100;
   font-size: 22px;
   color: var(--font-dark);
-  padding: 10px 0 0 0;
+  padding-top: 20px;
 }
 
 h5{
@@ -420,6 +420,68 @@ h5{
 /*end section Virtual tour*/
 
 /*section Explorer*/
+
+/*.grid-2{*/
+/*  height: 100%;*/
+/*}*/
+.compare-img-wrapper{
+  max-width: 720px;
+  margin: 0 auto;
+}
+.compare-img-wrapper img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: left;
+}
+
+.compare-img-wrapper .images-container{
+  position: relative;
+  display: flex;
+}
+
+.compare-img-wrapper .images-container .img-before{
+  position: absolute;
+  top: 0;
+  width: 60%;
+}
+
+.compare-img-wrapper .slider-range{
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  /*-webkit-appearance: none;*/
+  /*background: transparent;*/
+  /*&::-webkit-slider-thumb {*/
+  /*  appearance: none;*/
+  /*  border: 5px solid #fff;*/
+  /*  height: 40px;*/
+  /*  width: 40px;*/
+  /*  border-radius: 50%;*/
+  /*}*/
+}
+
+/*.compare-img-wrapper .slider-line{*/
+/*  position: absolute;*/
+/*  top:0;*/
+/*  left: calc(60% - 2px);*/
+/*  width: 4px;*/
+/*  height: 100%;*/
+/*  background: #fff;*/
+/*}*/
+
+.slider-thumb{
+  position: absolute;
+  width: 40px;
+  height: 100%;
+  top:0;
+  left: 60%;
+  transform: translateX(-50%);
+  background: url("./assets/svg/explore/thumb.svg") no-repeat 0 0/cover;
+}
+
+
+
 
 /*end section Explorer*/
 
@@ -726,13 +788,7 @@ fieldset{
     position: relative;
     bottom: 0;
     margin-left: auto;
-    /*width: 600px;*/
-    /*height: 120px;*/
-    /*display: flex;*/
-    /*align-items: center;*/
-    /*justify-content: center;*/
     column-gap:45px;
-    /*background-color: var(--font-dark);*/
   }
 
   .bullet{
@@ -750,9 +806,20 @@ fieldset{
   }
 
   .cards{
+    padding: 0 108px;
     grid-template-columns: repeat(2, 1fr);
     column-gap: 108px;
     row-gap: 60px;
+  }
+
+  .card__title{
+    font-size: 28px;
+    letter-spacing: 3px;
+  }
+
+  .card__title:after{
+    height: 2px;
+    width: 150px;
   }
 
   .grid-2{
