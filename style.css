@@ -682,6 +682,13 @@ h5{
 }
 /*end Tickets*/
 
+/*            parallax       */
+
+.parallax{
+  height: 400px;
+  background: url("./assets/img/parallax.jpg") no-repeat fixed 0 0/cover;
+}
+
 /*menu burger*/
 .burger{
   display: none;
