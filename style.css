@@ -98,12 +98,12 @@ a:hover{
   margin-bottom: 0;
 }
 
-.form-title{
-  font-size: 28px;
-  font-weight: bold;
-  color: var(--font-dark);
-  padding-bottom: 25px;
-}
+/*.form-title{*/
+/*  font-size: 28px;*/
+/*  font-weight: bold;*/
+/*  color: var(--font-dark);*/
+/*  padding-bottom: 25px;*/
+/*}*/
 
 .card__title:after{
   content: "";
@@ -136,6 +136,10 @@ h4, label{
   font-size: 22px;
   color: var(--font-dark);
   padding-top: 20px;
+}
+
+label{
+  font-weight: 300;
 }
 
 h5{
@@ -446,29 +450,11 @@ h5{
   width: 60%;
 }
 
-.compare-img-wrapper .slider-range{
+.compare-img-wrapper .slider-range {
   position: absolute;
   inset: 0;
   opacity: 0;
-  /*-webkit-appearance: none;*/
-  /*background: transparent;*/
-  /*&::-webkit-slider-thumb {*/
-  /*  appearance: none;*/
-  /*  border: 5px solid #fff;*/
-  /*  height: 40px;*/
-  /*  width: 40px;*/
-  /*  border-radius: 50%;*/
-  /*}*/
 }
-
-/*.compare-img-wrapper .slider-line{*/
-/*  position: absolute;*/
-/*  top:0;*/
-/*  left: calc(60% - 2px);*/
-/*  width: 4px;*/
-/*  height: 100%;*/
-/*  background: #fff;*/
-/*}*/
 
 .slider-thumb{
   position: absolute;
@@ -640,18 +626,56 @@ h5{
   justify-content: space-between;
 
 }
-fieldset{
-  display: flex;
-  flex-direction: column;
-  border: none;
-  padding-top: 25px;
+
+.type-list{
+  font-size: 28px;
+  font-weight: bold;
+  color: var(--font-dark);
 }
+
+.type-list li:first-child{
+  padding-top: 50px;
+}
+
 .type-ticket{
   padding-top: 25px;
+  display: grid;
+  grid-template-columns: 17px auto;
+  grid-column-gap: 23px;
 }
+
 .type-ticket input{
-  margin-right: 23px;
+  -webkit-appearance: none;
+  appearance: none;
+  margin-top: 23px;
+  width: 17px;
+  height: 17px;
+  border: 2px black solid;
+  border-radius: 50%;
+  display: grid;
+  place-content: center;
 }
+
+.type-ticket input::before{
+  content: '';
+  box-sizing: border-box;
+  transform: scale(0);
+  width: 8px;
+  height:8px;
+  box-shadow: inset 7px 7px var(--font-dark);
+  border-radius: 50%;
+  transition: 0.3s transform ease-in-out;
+}
+
+.type-ticket input:checked::before{
+  transform: scale(1);
+}
+
+.type-ticket label{
+  cursor: pointer;
+}
+
+
 
 .total{
 

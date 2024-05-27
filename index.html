@@ -277,27 +277,23 @@
             <div class="grid-2">
               <img src="./assets/img/tickets/ticket_foto.jpg" alt="buy ticket">
               <form class="form-tickets" onsubmit="buyTicket()">
-                <fieldset>
-                  <legend class="form-title">
+                <ul class="type-list">
                     Ticket Type
-                  </legend>
-                  <div class="type-ticket">
+                  <li class="type-ticket">
                     <input type="radio" name="type_ticket" value="Permanent" id="permanent" checked/>
                     <label for="permanent">Permanent exhibition</label>
-                  </div>
+                  </li>
 
-                  <div class="type-ticket">
+                  <li class="type-ticket">
                     <input type="radio" name="type_ticket" value="Temporary" id="temporary"/>
                     <label for="temporary">Temporary exhibition</label>
-                  </div>
-
-
-                  <div class="type-ticket">
+                  </li>
+                  <li class="type-ticket">
                     <input type="radio" name="type_ticket" value="Combined" id="combined"/>
                     <label for="combined"> Combined Admission</label>
-                  </div>
+                  </li>
 
-                </fieldset>
+                </ul>
                 <fieldset>
                   <legend class="form-title">
                     Amount
