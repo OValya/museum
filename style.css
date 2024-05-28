@@ -130,6 +130,11 @@ p{
   color: var(--font-dark);
 }
 
+h3 {
+  font-size: 28px;
+  margin-bottom: 50px;
+}
+
 h4, label{
   font-family: var(--font-family), serif;
   font-weight: 100;
@@ -738,6 +743,31 @@ h5{
   background: url("./assets/img/parallax.jpg") no-repeat fixed 0 0/cover;
 }
 
+/* end parallax */
+
+/* contacts*/
+.flex-2{
+  display: flex;
+  justify-content: space-between;
+}
+
+.contacts-info p{
+  margin-bottom: 25px;
+}
+
+.map-wrapper{
+  position: relative;
+  width: 960px;
+  height: 620px;
+}
+#map {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+/* end contacts*/
 /*menu burger*/
 .burger{
   display: none;
