@@ -768,6 +768,29 @@ h5{
 }
 
 /* end contacts*/
+
+/* booking form*/
+.booking{
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top:0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(113, 7, 7, 0.75);
+  z-index: 100;
+}
+
+.booking-content{
+  width: 970px;
+  height: 663px;
+  background-color: var(--bg-light);
+
+}
+/* end booking form*/
+
 /*menu burger*/
 .burger{
   display: none;

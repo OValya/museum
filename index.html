@@ -331,6 +331,71 @@
             </div>
           </div>
         </section>
+        <div class="booking">
+          <div class="booking-content">
+            <h2> Booking tickets</h2>
+            <span>tour de louvre</span>
+            <form>
+              <div class="form-info">
+                <input type="date"/>
+                <input type="time"/>
+                <input type="text"/>
+                <input type="email"/>
+                <input type="tel"/>
+                <select></select>
+                <div class="ticket-counter-wrapper">
+                  <label for="booking-basic">Basic 18+</label>
+                  <div class="ticket-counter">
+                    <span>&mdash;</span>
+                    <input type="number"  id="booking-basic" value="0" min="0" max="99"/>
+                    <span>+</span>
+                  </div>
+                </div>
+
+                <div class="ticket-counter-wrapper">
+                  <label for="booking-senior">Senior 65+</label>
+                  <div class="ticket-counter">
+                    <span>&mdash;</span>
+                    <input type="number"  id="booking-senior" value="0" min="0" max="99"/>
+                    <span>+</span>
+                  </div>
+                </div>
+              </div>
+              <div class="overview">
+                <div class="data">
+                  <p>Overview</p>
+                  <p>Tour de louvre</p>
+                  <p>Friday, August 23</p>
+                  <p>16 : 30</p>
+                  <p>Temporary Expedition</p>
+                </div>
+                <img src="./assets/img/tickets/booking.png" alt="booking-image">
+                <div class="total-tickets">
+
+                </div>
+                <div class="payment">
+                  <div class="card-front">
+                    <label>Card number
+                      <input/>
+                    </label>
+                    <label>Expiration date
+                      <input type="number" min="1" max="12"/>
+                      <input type="number" min="2024"/>
+                    </label>
+                    <label>Cardholder name
+                      <input type="text" >
+                    </label>
+                  </div>
+                  <div class="card-back">
+                    <label>CVC/CVV
+                      <input/>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
         <div class="parallax"></div>
         <section class="section contacts light-bg" id="contacts">
           <div class="wrapper">
