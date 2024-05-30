@@ -54,6 +54,10 @@ a:hover{
   margin: 0 auto;
 }
 
+.section:first-child{
+  padding: 0 0 75px;
+}
+
 .section{
   padding: 75px 0;
 }
@@ -471,6 +475,17 @@ h5{
   background: url("./assets/svg/explore/thumb.svg") no-repeat 0 0/cover;
 }
 
+.section.explore p{
+  font-size: 22px;
+  padding-bottom: 25px;
+  line-height: 38.5px;
+
+}
+
+.yellow-veil{
+  color: #CAAA7D;
+}
+
 
 
 
@@ -771,16 +786,20 @@ h5{
 
 /* booking form*/
 .booking{
+  display:none;
   position: fixed;
   height: 100%;
   width: 100%;
   top:0;
   left: 0;
+  background-color: rgba(113, 7, 7, 0.75);
+  z-index: 100;
+}
+
+.booking.show{
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgba(113, 7, 7, 0.75);
-  z-index: 100;
 }
 
 .booking-content{
