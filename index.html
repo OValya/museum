@@ -376,28 +376,53 @@
                 </div>
                 <img src="./assets/img/tickets/booking.png" alt="booking-image">
                 <div class="total-tickets">
+                  <div class="total-tickets-type" >
+                    <span>Basic (20 €)</span>
+                    <span>40 €</span>
+                  </div>
+                  <div class="total-tickets-type">
+                    <span >Senior (10 €)</span>
+                    <span>20 €</span>
+                  </div>
+
+                  <div class="total-tickets-type total-price">
+                    <span>Total</span>
+                    <span>60 €</span>
+                  </div>
 
                 </div>
                 <div class="payment">
                   <div class="card-front">
-                    <label>Card number
-                      <input/>
-                    </label>
-                    <label>Expiration date
-                      <input type="number" min="1" max="12"/>
-                      <input type="number" min="2024"/>
-                    </label>
-                    <label>Cardholder name
-                      <input type="text" >
-                    </label>
+                    <div class="card-front-container">
+                      <label for="card-number">Card number</label>
+                      <input id="card-number"/>
+                    </div>
+                    <div class="card-front-container">
+                      <label for="exp-month">Expiration date</label>
+                      <div class="expire-container">
+                        <input id="exp-month" type="number" min="1" max="12"/>
+<!--                        <label for="exp-year"></label>-->
+                        <input id="exp-year" type="number" min="2024"/>
+                      </div>
+                    </div>
+                    <div class="card-front-container card-holder">
+                      <label for="card-holder">Cardholder name </label>
+                      <input id="card-holder" type="text" >
+                    </div>
                   </div>
                   <div class="card-back">
-                    <label>CVC/CVV
-                      <input/>
-                    </label>
+                    <div class="black-tape"></div>
+                    <div class="cvc-container">
+                      <label for="cvc">CVC/CVV</label>
+                      <input id="cvc"/>
+                      <p>The last 3 or 4 digits on back of the car</p>
+                    </div>
+
                   </div>
                 </div>
+                <button>Book</button>
               </div>
+
             </form>
           </div>
 
