@@ -168,3 +168,16 @@ const map = new mapboxgl.Map({
 });
 
 
+const form = document.querySelector('.form-tickets');
+const dialogBooking = document.getElementById('booking');
+form.addEventListener('submit', (e)=>{
+    e.preventDefault();
+    dialogBooking.showModal();
+})
+
+dialogBooking.addEventListener('click', ({target, currentTarget})=>{
+    if(target===currentTarget) dialogBooking.close()
+
+})
+
+

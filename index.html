@@ -282,7 +282,7 @@
             <h2 class="section__title underlined-title">BUY TICKETS</h2>
             <div class="grid-2">
               <img src="./assets/img/tickets/ticket_foto.jpg" alt="buy ticket">
-              <form class="form-tickets" onsubmit="buyTicket()">
+              <form class="form-tickets" >
                 <ul class="type-list">
                     Ticket Type
                   <li class="type-ticket">
@@ -331,8 +331,8 @@
             </div>
           </div>
         </section>
-        <div class="booking show">
-            <form class="booking-content">
+        <dialog id="booking" aria-labelledby="dialog-booking">
+            <form class="booking-content" method="dialog">
               <div class="form-info">
                 <h2> Booking tickets</h2>
                 <p class="description">Tour de Louvre</p>
@@ -424,7 +424,7 @@
               </div>
 
             </form>
-          </div>
+          </dialog>
 
         <div class="parallax"></div>
         <section class="section contacts light-bg" id="contacts">

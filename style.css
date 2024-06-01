@@ -21,7 +21,9 @@
 }
 html,
 body {
+
   height: 100%;
+  scrollbar-gutter: stable;
 }
 
 body {
@@ -785,30 +787,74 @@ h5{
 /* end contacts*/
 
 /* booking form*/
+dialog::backdrop{
+  /*background-color: #710707;*/
+  background-image: linear-gradient(
+          var(--dark-red),
+          var(--light-color)
+  );
+  opacity: 0.75;
+}
+dialog[open]{
+  animation: show 0.5s ease-out;
+}
 
-.booking {
-  display:none;
-  position: fixed;
-  height: 100%;
-  width: 100%;
-  top:0;
-  left: 0;
-  background-color: rgba(113, 7, 7, 0.75);
-  z-index: 100;
 
-  &.show{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+@keyframes show{
+  0%{
+    left: 100%;
   }
+  100%{
+    left: 50%;
+  }
+}
+
+@keyframes hide {
+  0%{
+    left: 50%;
+  }
+  100%{
+    left: 200%;
+  }
+}
+/*dialog.hide{*/
+/*  animation: hide 2s ease-out;*/
+/*}*/
+
+dialog {
+  position: fixed;
+  width: 1440px;
+  height: 845px;
+  background-color: var(--bg-light);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+  padding: 0;
+  border: none;
+  transition: display 1s , overlay 1s ;
+  transition-behavior: allow-discrete;
+  animation: hide 2s ease-out;
+  /*height: 100%;*/
+  /*width: 100%;*/
+  /*top:0;*/
+  /*left: 0;*/
+  /*background-color: rgba(113, 7, 7, 0.75);*/
+  /*z-index: 100;*/
+
+  /*&.show{*/
+  /*  display: flex;*/
+  /*  justify-content: center;*/
+  /*  align-items: center;*/
+  /*}*/
 
   .booking-content{
-    width: 1440px;
-    height: 845px;
+    /*width: 1440px;*/
+    /*height: 845px;*/
     display: grid;
     grid-template-columns: 400px 470px;
     gap: 20px 40px;
-    background-color: var(--bg-light);
+    /*background-color: var(--bg-light);*/
     padding: 91px 235px;
   }
   .form-info{
@@ -1030,12 +1076,8 @@ h5{
      }
 
   }
-
-
-
-
-
 }
+
 /* end booking form*/
 
 /*menu burger*/
