@@ -117,8 +117,6 @@ const iframeData = [{
         img: './assets/video/poster4.jpg',
         link: 'https://www.youtube.com/embed/2OR0OCr6uRE?autoplay=1&mute=1&si=KnCyZFHZP4UP9NIg'
     }
-
-
 ]
 const srcDocs = [];
 iframeData.map(data =>{
@@ -144,7 +142,7 @@ for (let i = 0; i < srcDocs.length; i++) {
     iframeContainer.append(iframe)
 }
 
-
+//explore
 const sliderRange = document.querySelector(".slider-range")
 const beforeImage = document.querySelector(".img-before")
 const sliderLine = document.querySelector(".slider-thumb")
@@ -158,7 +156,7 @@ sliderRange.addEventListener('input', (e)=>{
 )
 
 
-
+//contacts
 mapboxgl.accessToken = 'pk.eyJ1IjoidmFseWExOTg2IiwiYSI6ImNsd3FldW9scTAxMHUyaXM5ZGxvMnFlM3IifQ.m2fJStbAbwQPn-fyMLsW4w';
 const map = new mapboxgl.Map({
     container: 'map',
@@ -167,6 +165,8 @@ const map = new mapboxgl.Map({
     zoom: 16
 });
 
+
+//booking form
 
 const form = document.querySelector('.form-tickets');
 const dialogBooking = document.getElementById('booking');
@@ -180,4 +180,19 @@ dialogBooking.addEventListener('click', ({target, currentTarget})=>{
 
 })
 
+
+//burger
+
+const burger = document.querySelector('.burger')
+const sideMenu = document.querySelector('.nav')
+burger.addEventListener('click', ()=>{
+    if(burger.classList.contains('show-menu')) {
+        burger.classList.remove('show-menu');
+        sideMenu.classList.remove('show-menu')
+    } else{
+        burger.classList.add('show-menu');
+        sideMenu.classList.add('show-menu')
+    }
+
+})
 
