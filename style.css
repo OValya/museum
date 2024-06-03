@@ -633,18 +633,19 @@ h5{
   border: 2px solid black;
   padding: 12px 14px;
   font-size: 32px;
-
   display: flex;
   justify-content: space-between;
+  input{
+    border:none;
+    font-size: 22px;
+    outline: none;
+    text-align: center;
+  }
+  span{
+    cursor: pointer;
+  }
 }
 
-.ticket-counter input{
-  border:none;
-  font-size: 22px;
-  outline: none;
-  text-align: center;
-
-}
 
 .ticket-counter input::-webkit-outer-spin-button,
 .ticket-counter input::-webkit-inner-spin-button {

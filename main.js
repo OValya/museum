@@ -1,5 +1,5 @@
 import './style.css'
-
+import container    from "./gallery.js";
 
 //--------WELCOME
 const slides = document.querySelectorAll('.slide');
@@ -165,15 +165,50 @@ const map = new mapboxgl.Map({
 //booking form
 
 const form = document.querySelector('.form-tickets');
+const incBasic = document.querySelector('.increment.basic');
+const incSenior = document.querySelector('.increment.senior');
+const decBasic = document.querySelector('.decrement.basic');
+const decSenior = document.querySelector('.decrement.senior');
+const calcTotal = document.querySelector('.calc-total');
+const inputBasic = document.getElementById('basic');
+const inputSenior = document.getElementById('senior');
+
+
+function increment(input){
+    if(input.value < 99)  input.value = +input.value + 1;
+}
+
+function decrement(input){
+    if (input.value > 0){
+        input.value = +input.value - 1;
+    }
+}
+
+function check(input) {
+    if(input.value > 99)  input.value = 99;
+    if(input.value < 0)  input.value = 0;
+}
+
+function calculateTotalPrice(countBasic, countSenior){
+    return countBasic * 20 + countSenior * 10;
+}
+
+inputBasic.oninput = () => {check(inputBasic); calcTotal.textContent = calculateTotalPrice(inputBasic.value, inputSenior.value)}
+inputSenior.oninput = () => {check(inputSenior); calcTotal.textContent = calculateTotalPrice(inputBasic.value, inputSenior.value)}
+
+incBasic.onclick = () => {increment(inputBasic); calcTotal.textContent = calculateTotalPrice(inputBasic.value, inputSenior.value)}
+decBasic.onclick = () => {decrement(inputBasic); calcTotal.textContent = calculateTotalPrice(inputBasic.value, inputSenior.value)}
+
+incSenior.onclick = () => {increment(inputSenior); calcTotal.textContent= calculateTotalPrice(inputBasic.value, inputSenior.value)}
+decSenior.onclick = () => {decrement(inputSenior); calcTotal.textContent = calculateTotalPrice(inputBasic.value, inputSenior.value)}
+
+
+
 
 const dataForm = (form) => {
-    // const collection = form.elements;
-    // const data = Array.from(collection).filter(it=>!!it.name).map(el => {
-    //     const {name, value} = el;
-    //     return {name, value}
-    // } );
     return new FormData(form)
 }
+
 
 const dialogBooking = document.getElementById('booking');
 const formBooking = document.querySelector('.booking-content')
@@ -186,8 +221,9 @@ form.addEventListener('submit', (e)=>{
 })
 dialogBooking.addEventListener('click', ({target, currentTarget})=>{
     if(target===currentTarget) dialogBooking.close()
-
 })
+
+
 
 
 //burger
@@ -209,3 +245,6 @@ function hideSideMenu(){
 }
 
 window.addEventListener('scroll', hideSideMenu);
+
+
+//
