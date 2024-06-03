@@ -1,6 +1,4 @@
 import './style.css'
-import container from "./gallery.js";
-
 
 
 //--------WELCOME
@@ -86,7 +84,6 @@ arrowNext.addEventListener('click', ()=>showSlide('left'))
 const iframeContainer = document.querySelector('.video-slide__container');
 function createFrame(srcDoc, src){
     const frame = document.createElement('iframe');
-    // frame.src = src;
     frame.srcdoc = srcDoc;
     frame.width='452'
     frame.height='254';
@@ -94,10 +91,10 @@ function createFrame(srcDoc, src){
     frame.allowFullscreen=true;
     frame.allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
     frame.referrerpolicy='strict-origin-when-cross-origin'
-
     return frame;
 }
-const iframeData = [{
+const iframeData = [
+    {
         img: './assets/video/poster0.jpg',
         link: "https://www.youtube.com/embed/Vi5D6FKhRmo?autoplay=1&mute=1&si=ttxrEYDeR6xOHy-j"
     },
@@ -127,7 +124,6 @@ iframeData.map(data =>{
                             span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}
                             html:hover span{color: darkgoldenrod}
                             html:hover img{transform: scale(1.1); transition: transform .5s;}
-                           
                             </style>
                             <a href= ${data.link}>
                             <img src=${data.img} alt='Video youtube' width='452'>
@@ -169,12 +165,25 @@ const map = new mapboxgl.Map({
 //booking form
 
 const form = document.querySelector('.form-tickets');
+
+const dataForm = (form) => {
+    // const collection = form.elements;
+    // const data = Array.from(collection).filter(it=>!!it.name).map(el => {
+    //     const {name, value} = el;
+    //     return {name, value}
+    // } );
+    return new FormData(form)
+}
+
 const dialogBooking = document.getElementById('booking');
+const formBooking = document.querySelector('.booking-content')
 form.addEventListener('submit', (e)=>{
     e.preventDefault();
+    const data = dataForm(form)
+    console.log(data);
+    formBooking.type_ticket.value =  data.get('type_ticket')
     dialogBooking.showModal();
 })
-
 dialogBooking.addEventListener('click', ({target, currentTarget})=>{
     if(target===currentTarget) dialogBooking.close()
 
@@ -187,12 +196,16 @@ const burger = document.querySelector('.burger')
 const sideMenu = document.querySelector('.nav')
 burger.addEventListener('click', ()=>{
     if(burger.classList.contains('show-menu')) {
-        burger.classList.remove('show-menu');
-        sideMenu.classList.remove('show-menu')
+        hideSideMenu()
     } else{
         burger.classList.add('show-menu');
         sideMenu.classList.add('show-menu')
     }
-
 })
 
+function hideSideMenu(){
+        burger.classList.remove('show-menu');
+        sideMenu.classList.remove('show-menu')
+}
+
+window.addEventListener('scroll', hideSideMenu);

@@ -159,15 +159,10 @@
               <img src="./assets/video/poster0.jpg" alt="video poster">
               <div class="controls">
                 <div class="control play"></div>
-
-                  <input type="range"/>
-
+                <input type="range"/>
                 <div class="control volume"></div>
-
-                  <input type="range"/>
-
+                <input type="range"/>
                 <div class="control full"></div>
-
               </div>
             </div>
             <div class="video-slider">
@@ -286,20 +281,20 @@
                 <ul class="type-list">
                     Ticket Type
                   <li class="type-ticket">
-                    <input type="radio" name="type_ticket" value="Permanent" id="permanent" checked/>
+                    <input type="radio" name="type_ticket" value="permanent" id="permanent" checked/>
                     <label for="permanent">Permanent exhibition</label>
                   </li>
 
                   <li class="type-ticket">
-                    <input type="radio" name="type_ticket" value="Temporary" id="temporary"/>
+                    <input type="radio" name="type_ticket" value="temporary" id="temporary"/>
                     <label for="temporary">Temporary exhibition</label>
                   </li>
                   <li class="type-ticket">
-                    <input type="radio" name="type_ticket" value="Combined" id="combined"/>
+                    <input type="radio" name="type_ticket" value="combined" id="combined"/>
                     <label for="combined"> Combined Admission</label>
                   </li>
-
                 </ul>
+
                 <div class="ticket-count-form">
                   <p class="ticket-form-title">
                     Amount
@@ -307,18 +302,18 @@
                   <div class="ticket-counter-wrapper">
                     <label for="basic">Basic 18+</label>
                     <div class="ticket-counter">
-                      <span>&mdash;</span>
-                      <input type="number"  id="basic" value="0" min="0" max="99"/>
-                      <span>+</span>
+                      <span class="decrement">&mdash;</span>
+                      <input type="number" name="basic"  id="basic" value="0" min="0" max="99"/>
+                      <span class="increment">+</span>
                     </div>
                   </div>
 
                   <div class="ticket-counter-wrapper">
                     <label for="senior">Senior 65+</label>
                     <div class="ticket-counter">
-                      <span>&mdash;</span>
-                      <input type="number"  id="senior" value="0" min="0" max="99"/>
-                      <span>+</span>
+                      <span class="decrement">&mdash;</span>
+                      <input type="number" name="senior" id="senior" value="0" min="0" max="99"/>
+                      <span class="increment">+</span>
                     </div>
                   </div>
 
@@ -337,12 +332,16 @@
                 <h2> Booking tickets</h2>
                 <p class="description">Tour de Louvre</p>
                 <div class="input-container">
-                  <input type="date"/>
-                  <input type="time"/>
-                  <input class="text" type="text" placeholder="Name">
-                  <input class="email" type="email" placeholder="E-mail"/>
-                  <input class="phone" type="tel" placeholder="phone"/>
-                  <select></select>
+                  <input name="date" type="date" required />
+                  <input name="time" type="time" required/>
+                  <input name="name" class="text" type="text" placeholder="Name" required/>
+                  <input name="email" class="email" type="email" placeholder="E-mail" required/>
+                  <input name="phone" class="phone" type="tel" placeholder="phone" required/>
+                  <select name="type_ticket" required>
+                    <option value="permanent" selected>Permanent exhibition</option>
+                    <option value="temporary">Temporary exhibition</option>
+                    <option value="combined">Combined Admission</option>
+                  </select>
                 </div>
 
                 <div class="entry-ticket">
@@ -425,7 +424,6 @@
 
             </form>
           </dialog>
-
         <div class="parallax"></div>
         <section class="section contacts light-bg" id="contacts">
           <div class="wrapper">
@@ -446,7 +444,6 @@
             </div>
           </div>
         </section>
-
       </main>
       <footer class="footer">
         <div class="wrapper footer__wrapper-up">
