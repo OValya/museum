@@ -203,20 +203,26 @@ incSenior.onclick = () => {increment(inputSenior); calcTotal.textContent= calcul
 decSenior.onclick = () => {decrement(inputSenior); calcTotal.textContent = calculateTotalPrice(inputBasic.value, inputSenior.value)}
 
 
-
-
 const dataForm = (form) => {
     return new FormData(form)
 }
 
 
 const dialogBooking = document.getElementById('booking');
-const formBooking = document.querySelector('.booking-content')
+const formBooking = document.querySelector('.booking-content');
+const overviewDataType = document.querySelector('.data-type');
+const types = {'permanent': 'Permanent exhibition', 'temporary': 'Temporary exhibition', 'combined': 'Combined admission'};
+
 form.addEventListener('submit', (e)=>{
     e.preventDefault();
     const data = dataForm(form)
-    console.log(data);
-    formBooking.type_ticket.value =  data.get('type_ticket')
+   //console.log(Array.from(data.entries()));
+    formBooking.type_ticket.value =  data.get('type_ticket');
+    //console.log( types[data.get('type_ticket')] );
+    overviewDataType.textContent = types[data.get('type_ticket').toString()];
+    formBooking.booking_senior.value = data.get('senior');
+    formBooking.booking_basic.value = data.get('basic');
+
     dialogBooking.showModal();
 })
 dialogBooking.addEventListener('click', ({target, currentTarget})=>{
