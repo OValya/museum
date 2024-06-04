@@ -104,6 +104,7 @@ a:hover{
   margin-bottom: 0;
 }
 
+
 .card__title:after{
   content: "";
   position: absolute;
@@ -112,6 +113,11 @@ a:hover{
   height: 3px;
   width: 300px;
   background-color: var(--dark-red);
+  transition: width 0.3s;
+}
+.card:hover .card__title:after{
+  width: 100%;
+  transition: width 0.3s;
 }
 
 .light-bg .section__title{
@@ -388,16 +394,16 @@ h5{
   row-gap: 75px;
 }
 
-.card{
-  position: relative;
-}
+/*.card{*/
+/*  position: relative;*/
+/*}*/
 
-.card__link::before{
-  content: '';
-  position: absolute;
-  inset: 0;
-  cursor: pointer;
-}
+/*.card__link::before{*/
+/*  content: '';*/
+/*  position: absolute;*/
+/*  inset: 0;*/
+/*  cursor: pointer;*/
+/*}*/
 
 /*end section Virtual tour*/
 
@@ -532,38 +538,60 @@ h5{
 }
 
 
-.video-slide{
-  position: relative;
-}
+/*.video-slide{*/
+/*  position: relative;*/
+/*}*/
 
 .video-slider__bullets{
-  width: 100px;
-  height: 100px;
+  margin: 40px auto 0;
+  width: 200px;
+  height: 12px;
+  display: grid;
+  grid-template-columns: 1fr 6fr 1fr;
+
+  align-items: center;
+  gap: 20px;
+
+  .bullet,
+  .arrow-prev,
+  .arrow-next{
+    background-color: #999999;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+  }
+  .active-bullet{
+    background: #030303;
+  }
+  .arrow-prev,
+  .arrow-next{
+    border-radius:0;
+    mask: url('./assets/svg/video/stroke.svg') no-repeat 0 0/contain;
+  }
+  .arrow-next{
+    transform: rotate(180deg);
+  }
+
 }
 
-.bullet{
-  color: #9d8665;
-  width: 15px;
-}
+/*.title{*/
+/*  position: absolute;*/
+/*  left: 10px;*/
+/*  top: 15px;*/
+/*  width: 100%;*/
+/*}*/
 
-.title{
-  position: absolute;
-  left: 10px;
-  top: 15px;
-  width: 100%;
-}
+/*.title:before{*/
+/*  content: url("./assets/svg/video/Ellipse 9.svg");*/
+/*  vertical-align: middle;*/
+/*  margin-right: 10px;*/
+/*}*/
 
-.title:before{
-  content: url("./assets/svg/video/Ellipse 9.svg");
-  vertical-align: middle;
-  margin-right: 10px;
-}
-
-.title:after{
-  content: url("./assets/svg/video/video-menu.svg");
-  vertical-align: middle;
-  margin-left: auto;
-}
+/*.title:after{*/
+/*  content: url("./assets/svg/video/video-menu.svg");*/
+/*  vertical-align: middle;*/
+/*  margin-left: auto;*/
+/*}*/
 
 
 /*end section Video*/
