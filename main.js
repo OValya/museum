@@ -1,5 +1,5 @@
 import './style.css'
-import container    from "./gallery.js";
+import gallery from "./gallery.js";
 
 //--------WELCOME
 const slides = document.querySelectorAll('.slide');
@@ -80,6 +80,55 @@ arrowNext.addEventListener('click', ()=>showSlide('left'))
 //-------------WELCOME end
 
 //-----VIDEO
+const playRange = document.querySelector('.play-progress');
+const volumeRange = document.querySelector('.volume-progress');
+
+const volume= document.querySelector('.volume');
+const fullscreen = document.querySelector('.full');
+const play = document.querySelector('.play');
+
+// function toggle(el, firstCl, secondCl){
+//     if(el.classList.contains(firstCl)){
+//         el.classList.remove(firstCl)
+//         el.classList.add(secondCl)
+//     }else {
+//         el.classList.remove(secondCl)
+//         el.classList.add(firstCl)
+//     }
+// }
+
+play.addEventListener('click', ()=>{
+   // toggle(play, 'play', 'pause')
+    play.classList.toggle('pause');
+})
+
+volume.addEventListener('click', ()=>{
+    volume.classList.toggle('mute');
+})
+
+fullscreen.addEventListener('click', ()=>{
+    fullscreen.classList.toggle('min-screen');
+})
+
+function calcProgress(event, max){
+    const value = event.target.value;
+    return (value / max) * 100
+}
+
+playRange.style.background = `linear-gradient(to right, #710707 50%, #ccc 50%)`;
+volumeRange.style.background = `linear-gradient(to right, #710707 50%, #ccc 50%)`;
+
+playRange.addEventListener('input', e => {
+    const progress = calcProgress(e, playRange.max);
+    playRange.style.background = `linear-gradient(to right, #710707 ${progress}%, #ccc ${progress}%)`;
+})
+
+volumeRange.addEventListener('input', e => {
+    const progress = calcProgress(e, volumeRange.max);
+    volumeRange.style.background = `linear-gradient(to right, #710707 ${progress}%, #ccc ${progress}%)`;
+})
+
+
 
 const iframeContainer = document.querySelector('.video-slide__container');
 function createFrame(srcDoc, src){
