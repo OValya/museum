@@ -1290,7 +1290,65 @@ nav.show-menu{
 @media (max-width: 768px){
   .wrapper{
     max-width: 728px;
+    /*margin: 0 auto;*/
   }
+
+  .header__wrapper{
+    padding: 35px 0;
+  }
+
+  .section__title,
+  .card__title{
+    font-size: 40px;
+    line-height: 60px;
+    margin-bottom: 63px;
+  }
+
+  .card__title{
+    font-size: 22px;
+    margin-bottom: 0;
+    line-height: normal;
+  }
+
+  .welcome-section p{
+    font-size: 20px;
+  }
+
+  .welcome-wrapper{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /*height: 828px;*/
+  }
+
+  .section:first-child {
+    padding: 0;
+  }
+
+  .slider{
+    padding-top: 50px;
+    width: 100%;
+    max-width: 728px;
+  }
+  .slider__controls {
+    position: static;
+    width: 100%;
+  }
+
+  .welcome__info{
+    position: static;
+    text-align: center;
+    /*top: 153px;*/
+    /*left: 0;*/
+    /*z-index: 5;*/
+  }
+
+  .button{
+    display: none;
+
+  }
+
 
   .cards{
     grid-template-columns: repeat(2, 1fr);
