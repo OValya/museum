@@ -493,14 +493,12 @@ h5{
 /*section end Gallery*/
 
 /*section Video*/
-.video > img{
-  width: 100%;
-}
 
 .controls{
   background-color: var(--bg-dark);
   padding: 27px 30px;
   display: flex;
+  column-gap: 50px;
   justify-content: space-between;
   align-items: center;
   margin: 32px 0 40px;
@@ -565,20 +563,24 @@ h5{
   cursor: pointer;
 }
 
-.video-slider{
+.video-slider,
+.video{
   overflow: hidden;
 }
 
+.video-player{
+  display: flex;
+  width: 500%;
+}
+
 .video-slide__container{
+  position: relative;
+  left: calc(-2470px / 5);
   width: 2470px;
   display: flex;
   column-gap: 42px;
 }
 
-
-/*.video-slide{*/
-/*  position: relative;*/
-/*}*/
 
 .video-slider__bullets{
   margin: 40px auto 0;
