@@ -1285,12 +1285,23 @@ nav.show-menu{
   .info p:not(.visible-p){
     display: none;
   }
+
+  h5{
+    font-size: 16px;
+  }
 }
 
 @media (max-width: 768px){
   .wrapper{
     max-width: 728px;
-    /*margin: 0 auto;*/
+  }
+
+  h4{
+    font-size: 18px;
+  }
+
+  .section {
+    padding: 40px 0;
   }
 
   .header__wrapper{
@@ -1339,21 +1350,24 @@ nav.show-menu{
   .welcome__info{
     position: static;
     text-align: center;
-    /*top: 153px;*/
-    /*left: 0;*/
-    /*z-index: 5;*/
   }
-
   .button{
     display: none;
-
   }
 
-
   .cards{
+    padding: 0 56px;
     grid-template-columns: repeat(2, 1fr);
     column-gap: 56px;
     row-gap: 40px;
+  }
+
+  .grid-2 {
+    row-gap: 0px;
+  }
+
+  .visible-p{
+    display: none;
   }
 }
 
