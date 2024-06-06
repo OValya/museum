@@ -100,6 +100,9 @@ const play = document.querySelector('.play');
 play.addEventListener('click', ()=>{
    // toggle(play, 'play', 'pause')
     play.classList.toggle('pause');
+    for (let i = 0; i < frames.length; i++) {
+        frames[i].postMessage( '{"event":"command", "func":"pauseVideo", "args":""}', '*')
+    }
 })
 
 volume.addEventListener('click', ()=>{
@@ -145,23 +148,23 @@ function createFrame(srcDoc, src){
 const iframeData = [
     {
         img: './assets/video/poster0.jpg',
-        link: "https://www.youtube.com/embed/Vi5D6FKhRmo?autoplay=1&mute=1&si=ttxrEYDeR6xOHy-j"
+        link: "https://www.youtube.com/embed/Vi5D6FKhRmo?autoplay=1&mute=1&si=ttxrEYDeR6xOHy-j&enablejsapi=1"
     },
     {
         img: './assets/video/poster1.jpg',
-        link:  'https://www.youtube.com/embed/zp1BXPX8jcU?autoplay=1&mute=1&si=cCIlmtrksx1PTrtn'
+        link:  'https://www.youtube.com/embed/zp1BXPX8jcU?autoplay=1&mute=1&si=cCIlmtrksx1PTrtn&enablejsapi=1'
     },
     {
         img: './assets/video/poster2.jpg',
-        link: 'https://www.youtube.com/embed/NOhDysLnTvY?autoplay=1&mute=1&si=W_xV3pTHPFWetomC'
+        link: 'https://www.youtube.com/embed/NOhDysLnTvY?autoplay=1&mute=1&si=W_xV3pTHPFWetomC&enablejsapi=1'
     },
     {
         img: './assets/video/poster3.jpg',
-        link: 'https://www.youtube.com/embed/aWmJ5DgyWPI?autoplay=1&mute=1&si=SADA7qh4w4Z7u70G'
+        link: 'https://www.youtube.com/embed/aWmJ5DgyWPI?autoplay=1&mute=1&si=SADA7qh4w4Z7u70G&enablejsapi=1'
     },
     {
         img: './assets/video/poster4.jpg',
-        link: 'https://www.youtube.com/embed/2OR0OCr6uRE?autoplay=1&mute=1&si=KnCyZFHZP4UP9NIg'
+        link: 'https://www.youtube.com/embed/2OR0OCr6uRE?autoplay=1&mute=1&si=KnCyZFHZP4UP9NIg&enablejsapi=1'
     }
 ]
 const srcDocs = [];
@@ -186,6 +189,14 @@ for (let i = 0; i < srcDocs.length; i++) {
     const iframe = createFrame(srcDocs[i], iframeData[i].link);
     iframeContainer.append(iframe)
 }
+
+const frames = window.frames;
+
+for (let i = 0; i < frames.length; i++) {
+    frames[i].postMessage( '{"event":"command", "func":"pauseVideo", "args":""}', '*')
+}
+// frames.(fr => fr.contentWindow.postMessage( '{"event":"command", "func":"pauseVideo", "args":""}', '*'))
+// console.log(frames)
 
 //explore
 const sliderRange = document.querySelector(".slider-range")
