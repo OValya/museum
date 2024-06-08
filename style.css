@@ -1260,7 +1260,6 @@ nav.show-menu{
     }
   }
 
-
   .cards{
     padding: 0 108px;
     grid-template-columns: repeat(2, 1fr);
@@ -1473,6 +1472,79 @@ nav.show-menu{
   .wrapper{
     max-width: 380px;
   }
+
+  .section__title {
+    font-size: 28px;
+    line-height: 40px;
+    padding-bottom: 20px;
+    margin-bottom: 43px;
+  }
+
+  .cards {
+    padding: 0 50px;
+    grid-template-columns: 1fr;
+    column-gap:0;
+  }
+
+  .slider-thumb{
+    width: 20px;
+  }
+
+  .flex-3{
+    gap: 24px;
+    img {
+      max-width: 178px;
+    }
+  }
+
+  .section.tickets {
+    img{
+      float: none;
+      width: 380px;
+      height: 160px;
+      object-fit: cover;
+    }
+    .form-tickets{
+      padding: 0;
+      width: 175px;
+      margin: 0 auto;
+      text-align: center;
+      .ticket-counter-wrapper{
+        text-align: left;
+        .ticket-counter{
+          margin-top: 15px;
+        }
+      }
+    }
+  }
+
+  .map-wrapper{
+    margin-top: 40px;
+    max-width: 380px;
+    max-height: 248px;
+  }
+
+  .footer__wrapper-up{
+    display: flex;
+    flex-direction: column;
+
+    .footer-list{
+      columns: 3;
+      line-height: 50px;
+    }
+    .social-media{
+      gap: 10px;
+      align-self: center;
+    }
+  }
+  .footer__wrapper-bottom{
+    padding: 40px 0;
+    .copyrights li:nth-child(2){
+      display: none;
+    }
+  }
+
+
 
 }
 
