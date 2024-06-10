@@ -1300,6 +1300,7 @@ nav.show-menu{
   }
 
   .map-wrapper{
+    width: 100%;
     max-width: 694px;
     max-height: 454px;
   }
@@ -1415,6 +1416,7 @@ nav.show-menu{
   }
 
   .map-wrapper{
+    width: 100%;
     margin-top: 40px;
     max-width: 730px;
     max-height: 454px;
