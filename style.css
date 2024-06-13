@@ -826,8 +826,9 @@ dialog {
 
   .booking-content{
     display: grid;
-    grid-template-columns: 400px 470px;
+    grid-template-columns: 400px 530px;
     padding: 91px 235px;
+    column-gap: 40px;
   }
   .form-info{
     display: flex;
@@ -1324,6 +1325,33 @@ nav.show-menu{
   .footer__wrapper-up{
     padding: 60px 0 50px;
   }
+
+  dialog {
+
+    /*width: 970px;*/
+    width: 1024px;
+    height: 768px;
+    /*background-color: var(--bg-light);*/
+    /*top: 50%;*/
+    /*left: 50%;*/
+    /*transform: translate(-50%, -50%);*/
+    /*z-index: 100;*/
+    /*padding: 0;*/
+    /*border: none;*/
+    /*transition: display 1s , overlay 1s ;*/
+    /*transition-behavior: allow-discrete;*/
+    /*animation: hide 0.5s forwards;*/
+
+    .booking-content {
+      display: grid;
+      grid-template-columns: 400px 530px;
+      padding: 75px 15px 30px;
+
+    }
+  }
+
+
+
 }
 
 @media (max-width: 768px){
@@ -1466,6 +1494,24 @@ nav.show-menu{
   .footer__wrapper-bottom{
     padding: 40px 0;
   }
+
+  dialog {
+    width: 590px;
+    height: 100%;
+
+    .booking-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      row-gap: 50px;
+    }
+
+    .overview {
+      width: 100%;
+      padding: 25px 15px;
+      border: 1px solid var(--bg-dark);
+    }
+  }
 }
 
 
@@ -1545,6 +1591,37 @@ nav.show-menu{
       display: none;
     }
   }
+
+  dialog{
+    .overview {
+      img {
+        width: 120px;
+      }
+
+      .payment{
+
+        .card-front,
+        .card-back {
+          width: 330px;
+        }
+
+        .card-front{
+          background: url("assets/svg/booking_form/Mastercard.svg") 255px 65px no-repeat, url("assets/svg/booking_form/Visa.svg") 255px 34px no-repeat, #BCBCBC;
+        }
+
+        .card-back {
+          position: static;
+          margin-top:25px ;
+        }
+      }
+
+
+    }
+
+
+
+  }
+
 
 
 
