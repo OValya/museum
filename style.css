@@ -190,7 +190,7 @@ h5{
 
 .logo:before{
   content:'';
-  mask:url("./assets/logo.svg");
+  mask:url("assets/logo.svg");
   background-color: var(--light-color);
   display: inline-block;
   width: 49px;
@@ -376,11 +376,11 @@ h5{
   cursor: pointer;
 }
 .prev{
-  mask:url("./assets/svg/welcome/←-1.svg") no-repeat center center;
+  mask:url("assets/svg/welcome/←-1.svg") no-repeat center center;
 }
 
 .next{
-  mask:url("./assets/svg/welcome/←-1.svg") no-repeat center center;
+  mask:url("assets/svg/welcome/←-1.svg") no-repeat center center;
   transform: rotate(180deg);
 }
 /*end section Welcome*/
@@ -444,7 +444,7 @@ h5{
   top:0;
   left: 60%;
   transform: translateX(-50%);
-  background: url("./assets/svg/explore/thumb.svg") no-repeat 0 0/cover;
+  background: url("assets/svg/explore/thumb.svg") no-repeat 0 0/cover;
 }
 
 .section.explore p{
@@ -536,26 +536,26 @@ h5{
   max-width: 155px;
 }
 .play{
-  mask: url('./assets/svg/video/play.svg') no-repeat 0 0/contain;
+  mask: url('assets/svg/video/play.svg') no-repeat 0 0/contain;
 }
 .pause{
-  mask: url('./assets/svg/video/pause.svg') no-repeat 0 0/contain;
+  mask: url('assets/svg/video/pause.svg') no-repeat 0 0/contain;
 }
 
 
 .volume{
-  mask: url('./assets/svg/video/volume.svg') no-repeat 0 0/contain;
+  mask: url('assets/svg/video/volume.svg') no-repeat 0 0/contain;
 }
 
 .mute{
-  mask: url('./assets/svg/video/mute.svg') no-repeat 0 0/contain;
+  mask: url('assets/svg/video/mute.svg') no-repeat 0 0/contain;
 }
 
 .full{
-  mask: url('./assets/svg/video/Frame.svg') no-repeat 0 0/contain;
+  mask: url('assets/svg/video/Frame.svg') no-repeat 0 0/contain;
 }
 .min-screen{
-   mask: url('./assets/svg/video/fullscreen_exit.svg') no-repeat 0 0/contain;
+   mask: url('assets/svg/video/fullscreen_exit.svg') no-repeat 0 0/contain;
  }
 
 .control:hover{
@@ -606,7 +606,7 @@ h5{
   .arrow-prev,
   .arrow-next{
     border-radius:0;
-    mask: url('./assets/svg/video/stroke.svg') no-repeat 0 0/contain;
+    mask: url('assets/svg/video/stroke.svg') no-repeat 0 0/contain;
   }
   .arrow-next{
     transform: rotate(180deg);
@@ -752,7 +752,7 @@ h5{
 
 .parallax{
   height: 400px;
-  background: url("./assets/img/parallax.jpg") no-repeat fixed 0 0/cover;
+  background: url("assets/img/parallax.jpg") no-repeat fixed 0 0/cover;
 }
 
 /* end parallax */
@@ -848,7 +848,7 @@ dialog {
     top: -40px;
     width: 85px;
     height: 41px;
-    mask: url("./assets/logo.svg") no-repeat 0 0/ cover;
+    mask: url("assets/logo.svg") no-repeat 0 0/ cover;
     background: var(--font-gold);
   }
 
@@ -916,16 +916,16 @@ dialog {
     .data-date:before,
     .data-time:before,
     .data-type:before{
-      content: url("./assets/svg/booking_form/date.svg");
+      content: url("assets/svg/booking_form/date.svg");
       width: 15px;
       height: 15px;
       margin-right: 15px;
     }
     .data-time:before{
-      content: url("./assets/svg/booking_form/time.svg");
+      content: url("assets/svg/booking_form/time.svg");
     }
     .data-type:before{
-      content: url("./assets/svg/booking_form/check_circle_outline.svg");
+      content: url("assets/svg/booking_form/check_circle_outline.svg");
     }
 
     img{
@@ -1002,7 +1002,7 @@ dialog {
         position: relative;
         display: flex;
         flex-direction: column;
-        background: url("./assets/svg/booking_form/Mastercard.svg") 285px 65px no-repeat, url("./assets/svg/booking_form/Visa.svg") 285px 34px no-repeat;
+        background: url("assets/svg/booking_form/Mastercard.svg") 285px 65px no-repeat, url("assets/svg/booking_form/Visa.svg") 285px 34px no-repeat;
         background-color:#BCBCBC  ;
         z-index: 10;
       }
@@ -1158,22 +1158,22 @@ nav.show-menu{
 
 .insta{
   /*background: url("./assets/svg/social_icon/inst.svg") no-repeat center/50%;*/
-  mask: url("./assets/svg/social_icon/Instagram.svg") no-repeat center;
+  mask: url("assets/svg/social_icon/Instagram.svg") no-repeat center;
 }
 
 .fb{
-  mask: url("./assets/svg/social_icon/Facebook.svg") no-repeat center;
+  mask: url("assets/svg/social_icon/Facebook.svg") no-repeat center;
 }
 
 .pint{
-  mask: url("./assets/svg/social_icon/pinterest.svg") no-repeat center;
+  mask: url("assets/svg/social_icon/pinterest.svg") no-repeat center;
 }
 
 .youtube{
-  mask: url("./assets/svg/social_icon/Youtube.svg") no-repeat center;
+  mask: url("assets/svg/social_icon/youtube.svg") no-repeat center;
 }
 .tw{
-  mask: url("./assets/svg/social_icon/Twitter.svg") no-repeat center;
+  mask: url("assets/svg/social_icon/Twitter.svg") no-repeat center;
 }
 
 .social-media__icon:hover{

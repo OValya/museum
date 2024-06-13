@@ -13,8 +13,13 @@ function createImg(src, alt){
 const container = document.querySelector('.flex-3');
 
 const galleryImages = []
+
+// function getImageUrl(name) {
+//     return new URL(`./${name}`, import.meta.url).href
+// }
+
 for (let i = 1; i < 16; i++) {
-    const img = `./assets/img/gallery/galery${i}.jpg`;
+    const img = `./gallery/galery${i}.jpg`;
     galleryImages.push(img)
 }
 
