@@ -160,23 +160,23 @@ function createFrame( link, img, width='452', height='254',){
 const iframeData = [
 
     {
-        img: './video/poster1.jpg',
+        img: '/video/poster1.jpg',
         link:  'https://www.youtube.com/embed/zp1BXPX8jcU?controls=0&autoplay=1&mute=1&si=cCIlmtrksx1PTrtn&enablejsapi=1'
     },
     {
-        img: './video/poster2.jpg',
+        img: '/video/poster2.jpg',
         link: 'https://www.youtube.com/embed/NOhDysLnTvY?controls=0&autoplay=1&mute=1&si=W_xV3pTHPFWetomC&enablejsapi=1'
     },
     {
-        img: './video/poster3.jpg',
+        img: '/video/poster3.jpg',
         link: 'https://www.youtube.com/embed/aWmJ5DgyWPI?controls=0&autoplay=1&mute=1&si=SADA7qh4w4Z7u70G&enablejsapi=1'
     },
     {
-        img: './video/poster4.jpg',
+        img: '/video/poster4.jpg',
         link: 'https://www.youtube.com/embed/2OR0OCr6uRE?autoplay=1&mute=1&si=KnCyZFHZP4UP9NIg&enablejsapi=1'
     },
     {
-        img: './video/poster0.jpg',
+        img: '/video/poster0.jpg',
         link: "https://www.youtube.com/embed/Vi5D6FKhRmo?autoplay=1&mute=1&si=ttxrEYDeR6xOHy-j&enablejsapi=1"
     }
 ]
