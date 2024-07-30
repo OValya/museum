@@ -31,4 +31,4 @@ galleryImages.map(it => {
 
 
 
-export default container;
+//export default container;
